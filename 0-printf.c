@@ -4,10 +4,9 @@
  * @format: format specifier
  * Return: number of chars printed
  */
-
 int _printf(char *format, ...)
 {
-	int written = 0, (structype)(char *, va_list);
+	int written = 0, (*structype)(char *, va_list);
 	char q[3];
 	va_list pa;
 
@@ -47,17 +46,4 @@ int _printf(char *format, ...)
 	}
 	_putchar(-2);
 	return (written);
-}
-
-/**
- * main -Entry point
- * Return: Always 0
- */
-int main(void)
-{
-	_printf("Lloyd\n");
-	_printf("%c\n", 'v');
-	_printf("%s\n", "string");
-	_printf("%%\n");
-	return (0);
 }
