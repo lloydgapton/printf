@@ -20,12 +20,12 @@ int _printf(char *format, ...)
 	{
 		if (format[0] == '%')
 		{
-			structure = driver(format);
-			if (structure)
+			structype = driver(format);
+			if (structype)
 			{
 				q[0] = '%';
 				q[1] = format[1];
-				written += structure(q, pa);
+				written += structype(q, pa);
 			}
 			else if (format[1] != '\0')
 			{
@@ -48,15 +48,16 @@ int _printf(char *format, ...)
 	_putchar(-2);
 	return (written);
 }
+
 /**
-main -Entry point
-Return: Always 0
-/
+ * main -Entry point
+ * Return: Always 0
+ */
 int main(void)
 {
-_printf("Lloyd\n");
-_printf("%c\n", 'v');
-_printf("%s\n", "string");
-_printf("%%\n");
-return (0);
+	_printf("Lloyd\n");
+	_printf("%c\n", 'v');
+	_printf("%s\n", "string");
+	_printf("%%\n");
+	return (0);
 }

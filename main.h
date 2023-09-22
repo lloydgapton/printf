@@ -10,11 +10,12 @@
  * @u: print function
  * Return: an integer
  */
-typeof struct structprint
+typedef struct structprint
 {
 	char *q;
 	int (*u)(char *format, va_list);
-} structure;
+} structype;
+
 int _putchar(char ch);
 int print_unsign(char *format, va_list);
 int _puts(char *string);
