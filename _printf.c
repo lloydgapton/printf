@@ -47,3 +47,11 @@ int _printf(char *format, ...)
 	_putchar(-2);
 	return (written);
 }
+int main(void)
+{
+	_printf("Lloyd\n");
+	_printf("%c\n", 'v');
+	_printf("%s\n", "string");
+	_printf("%%\n");
+	return (0);
+}
